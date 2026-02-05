@@ -1,9 +1,12 @@
+"use client"
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import Image from "next/image";
 import Offering from "@/components/Offering";
 import Footer from "@/components/Footer";
 import CallToActionBanner from "@/components/CallToActionBanner";
+import MobileNav from "../../components/MobileNav";
+import { useEffect, useState} from 'react'
 import { projects } from "../data/projects";
 import { Playfair_Display, Epilogue } from "next/font/google";
 
@@ -20,11 +23,20 @@ const epilogue = Epilogue({
 });
 
 function Projects() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768); // md breakpoint
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   return (
     <>
-      <Navbar />
+      {isMobile ? <MobileNav /> : <Navbar />}
       <div className="px-[30px]">
-        <div className="relative w-full h-[600px] flex items-center justify-center bg-none sm:bg-[url(https://res.cloudinary.com/drdbt16fo/image/upload/v1770163186/projects_hero_bgje6b.jpg)] bg-no-repeat bg-cover">
+        <div className="relative w-full h-auto sm:h-[600px] flex items-center justify-center bg-none sm:bg-[url(https://res.cloudinary.com/drdbt16fo/image/upload/v1770163186/projects_hero_bgje6b.jpg)] bg-no-repeat bg-cover">
           {/* внутренняя рамка и контент */}
           <div className="relative z-10">
             <div className="pointer-events-none absolute inset-4 border border-[#e6dcd2]" />

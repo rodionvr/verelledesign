@@ -1,8 +1,11 @@
+"use client"
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import CallToActionBanner from "@/components/CallToActionBanner";
+import MobileNav from "../../components/MobileNav";
+import { useEffect, useState } from "react";
 import { Playfair_Display, Epilogue } from "next/font/google";
 
 const playfairdisplay = Playfair_Display({
@@ -18,9 +21,18 @@ const epilogue = Epilogue({
 });
 
 function Contact() {
+  const [isMobile, setIsMobile] = useState(false);
+  
+    useEffect(() => {
+      const checkMobile = () => setIsMobile(window.innerWidth < 768); // md breakpoint
+      checkMobile();
+      window.addEventListener("resize", checkMobile);
+      return () => window.removeEventListener("resize", checkMobile);
+    }, []);
+
   return (
     <>
-      <Navbar />
+      {isMobile ? <MobileNav /> : <Navbar />}
       <div className="px-[30px]">
         <section className="w-full relative">
           {/* HERO BANNER */}

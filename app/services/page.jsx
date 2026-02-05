@@ -39,7 +39,7 @@ function Services() {
     <>
       {isMobile ? <MobileNav /> : <Navbar />}
       <div className="px-[30px]">
-        <div className="relative w-full h-[600px] flex items-center justify-center bg-none sm:bg-[url(https://res.cloudinary.com/drdbt16fo/image/upload/v1769226763/kitchen-hero-img_zq5jgy.jpg)] bg-no-repeat bg-cover">
+        <div className="relative w-full h-auto sm:h-[600px] flex items-center justify-center bg-none sm:bg-[url(https://res.cloudinary.com/drdbt16fo/image/upload/v1769226763/kitchen-hero-img_zq5jgy.jpg)] bg-no-repeat bg-cover">
           {/* внутренняя рамка и контент */}
           <div className="relative z-10 ">
             <div className="pointer-events-none absolute inset-4 border border-[#e6dcd2]" />
@@ -281,7 +281,7 @@ function Services() {
               <p
                 className={`font-semibold text-[#575756] mb-2 underline ${epilogue.className}`}
               >
-                What's Included
+                What&apos;s Included
               </p>
               <ul
                 className={`list-disc list-inside text-[#575756] mb-6 ${epilogue.className}`}
@@ -382,7 +382,7 @@ function Services() {
               <p
                 className={`font-semibold text-[#575756] mb-2 underline ${epilogue.className}`}
               >
-                What's Included
+                What&apos;s Included
               </p>
               <ul
                 className={`list-disc list-inside text-[#575756] mb-6 ${epilogue.className}`}
@@ -390,7 +390,7 @@ function Services() {
                 <p>
                   Everything in the <strong>End-to-End Furnishing</strong>, plus
                 </p>
-                <li>Detailed layouts and technical drawings</li>
+                <li>Detailed layouts and drawings</li>
                 <li>Multiple high-quality 3D renders (room by room)</li>
                 <li>Finish and material boards with links to all selections</li>
                 <li>Procurement support</li>

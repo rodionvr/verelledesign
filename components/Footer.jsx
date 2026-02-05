@@ -6,7 +6,7 @@ function Footer() {
     "https://res.cloudinary.com/drdbt16fo/image/upload/v1768266677/logo_cai145.png";
   return (
     <footer className="bg-gray-100 mt-16">
-      <div className="mx-auto max-w-6xl px-6 py-12 grid gap-10 md:grid-cols-2 text-center md:text-left">
+      <div className="mx-auto max-w-6xl px-6 py-12 flex flex-col md:flex-row md:justify-between md:items-start gap-10 text-center md:text-left">
         {/* Brand */}
         <div className="flex flex-col gap-6 items-center md:items-start">
           <Link href="/">
@@ -50,7 +50,7 @@ function Footer() {
         </div>
 
         {/* Navigation */}
-        <div className="flex flex-col gap-3 text-sm items-center md:items-end">
+        <div className="flex flex-col gap-3 text-sm items-center md:items-center justify-center">
           <Link href="/">Home</Link>
           <Link href="/services">Services</Link>
           <Link href="/projects">Projects</Link>

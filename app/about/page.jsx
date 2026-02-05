@@ -3,6 +3,8 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import CallToActionBanner from "@/components/CallToActionBanner";
+import MobileNav from "../../components/MobileNav";
+import { useEffect, useState } from "react";
 import { Playfair_Display, Epilogue } from "next/font/google";
 
 const playfairdisplay = Playfair_Display({
@@ -18,9 +20,19 @@ const epilogue = Epilogue({
 });
 
 function About() {
+
+   const [isMobile, setIsMobile] = useState(false);
+  
+    useEffect(() => {
+      const checkMobile = () => setIsMobile(window.innerWidth < 768); // md breakpoint
+      checkMobile();
+      window.addEventListener("resize", checkMobile);
+      return () => window.removeEventListener("resize", checkMobile);
+    }, []);
+
   return (
     <>
-      <Navbar />
+      {isMobile ? <MobileNav /> : <Navbar />}
       <div className="px-[30px]">
         <div className="hero-banner-about">
           <div className="w-full">
@@ -50,7 +62,7 @@ function About() {
               <h2
                 className={`${playfairdisplay.className} text-[#A99082] text-4xl md:text-7xl leading-tight text-center`}
               >
-                Ottawa-based Interior Designer
+                Ottawa-based Interior Solutions specialist
               </h2>
             </div>
           </div>
@@ -67,7 +79,7 @@ function About() {
       font-light
     `}
           >
-            Uliana is an interior designer with an international design
+            Uliana is an interior specialist with an international design
             background and a strong foundation in both aesthetics and
             functionality. She began her design education in Russia, completing
             a four-year diploma program, and later continued her professional

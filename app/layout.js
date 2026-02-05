@@ -2,8 +2,8 @@ import "./globals.css";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Verelle Studio",
-  description: "Interior Design studio based in Ottawa-Gatineau area. We are here to help you.",
+  title: "Verelle Design",
+  description: "Designer based in Ottawa-Gatineau area. Here to help you.",
 };
 
 export default function RootLayout({ children }) {

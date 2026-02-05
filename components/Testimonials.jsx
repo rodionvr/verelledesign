@@ -82,6 +82,7 @@ export default function Testimonials() {
               let opacity = 0;
               let zIndex = 0;
               let scale = 0.8;
+              let extraClass = '';
 
               if (position === 0) {
                 // Main card - center and on top
@@ -89,24 +90,28 @@ export default function Testimonials() {
                 opacity = 1;
                 zIndex = 10;
                 scale = 1;
+                extraClass = "hidden";
               } else if (position === 1) {
                 // Next card - right and behind
                 transform = 'translateX(120px) scale(0.85)';
                 opacity = 0.6;
                 zIndex = 5;
                 scale = 0.85;
+                extraClass = "hidden";
               } else if (position === testimonials.length - 1) {
                 // Previous card - left and behind
                 transform = 'translateX(-120px) scale(0.85)';
                 opacity = 0.6;
                 zIndex = 5;
                 scale = 0.85;
+                extraClass = "hidden";
               } else {
                 // Other cards - hidden
                 transform = 'translateX(0) scale(0.7)';
                 opacity = 0;
                 zIndex = 0;
                 scale = 0.7;
+                extraClass = "hidden";
               }
 
               return (
