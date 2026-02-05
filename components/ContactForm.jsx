@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-import { sendEmailAction } from "../app/actions/sendEmail";
 import React from "react";
 
 export default function ContactForm() {
