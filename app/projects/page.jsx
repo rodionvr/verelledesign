@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import Image from "next/image";
@@ -6,7 +6,7 @@ import Offering from "@/components/Offering";
 import Footer from "@/components/Footer";
 import CallToActionBanner from "@/components/CallToActionBanner";
 import MobileNav from "../../components/MobileNav";
-import { useEffect, useState} from 'react'
+import { useEffect, useState } from "react";
 import { projects } from "../data/projects";
 import { Playfair_Display, Epilogue } from "next/font/google";
 
@@ -53,10 +53,11 @@ function Projects() {
                 philosophy, attention to detail, and commitment to creating
                 meaningful spaces tailored to each client.
               </p>
-
-              <button className="mt-10 w-[350px] h-[56px] bg-[#A48A7B] text-white tracking-wide flex items-center justify-center hover:bg-[#8F7842] transition cursor-pointer">
-                BOOK AN APPOINTMENT
-              </button>
+              <Link href="/contact">
+                <button className="mt-10 w-[350px] h-[56px] bg-[#A48A7B] text-white tracking-wide flex items-center justify-center hover:bg-[var(--hoverprimary)] transition cursor-pointer">
+                  BOOK AN APPOINTMENT
+                </button>
+              </Link>
             </div>
           </div>
         </div>

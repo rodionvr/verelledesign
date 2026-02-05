@@ -52,12 +52,12 @@ export default function Home() {
               DESIGN THE SPACE <br />YOU&apos;VE ALWAYS IMAGINED
             </h1>
           </div>
-          <a
-            href="#"
+          <Link
+            href="/contact"
             className="mt-6 sm:mt-10 bg-white text-[#A48A7B] py-3 sm:py-5 px-6 sm:px-10 text-lg sm:text-xl hover:bg-gray-100 transition duration-200"
           >
             BOOK AN APPOINTMENT
-          </a>
+          </Link>
         </div>
 
         {/* OFFERINGS */}

@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { Playfair_Display, Epilogue } from "next/font/google";
+
 
 const playfairdisplay = Playfair_Display({
   weight: "400",
@@ -43,9 +45,11 @@ function CallToActionBanner() {
             all to life. No pressure - just a relaxed, inspiring chat that gets
             you closer to the space you&apos;ve been imagining.
           </p>
-          <button className="bg-[var(--brand-color)] text-white text-lg md:text-xl px-6 md:px-10 py-3 mt-5 hover:bg-[var(--hoverprimary)] transition-colors duration-300 cursor-pointer font-extralight">
-            Book Now
-          </button>
+          <Link href="/contact">
+            <button className="bg-[var(--brand-color)] text-white text-lg md:text-xl px-6 md:px-10 py-3 mt-5 hover:bg-[var(--hoverprimary)] transition-colors duration-300 cursor-pointer font-extralight">
+              Book Now
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,10 +1,11 @@
-"use client"
+"use client";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 import CallToActionBanner from "@/components/CallToActionBanner";
 import MobileNav from "../../components/MobileNav";
-import { useEffect, useState} from 'react'
+import { useEffect, useState } from "react";
 import { Playfair_Display, Epilogue } from "next/font/google";
 
 const playfairdisplay = Playfair_Display({
@@ -29,8 +30,8 @@ function Services() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768); // md breakpoint
-    checkMobile(); // сразу проверить
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
@@ -56,10 +57,11 @@ function Services() {
                 to final execution. Our approach combines creativity, technical
                 precision, and attention to detail at every stage.
               </p>
-
-              <button className="mt-10 w-[350px] h-[56px] bg-[#A48A7B] text-white tracking-wide flex items-center justify-center hover:bg-[#8F7842] transition cursor-pointer">
-                BOOK AN APPOINTMENT
-              </button>
+              <Link href="/contact">
+                <button className="mt-10 w-[350px] h-[56px] bg-[#A48A7B] hover:bg-[var(--hoverprimary)] text-white tracking-wide flex items-center justify-center transition cursor-pointer">
+                  BOOK AN APPOINTMENT
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -296,9 +298,11 @@ function Services() {
                   One revision (one round of adjustments based on feedback)
                 </li>
               </ul>
-              <button className="border border-[#575756] text-[#575756] py-2 px-6 w-max hover:bg-[#575756] hover:text-white transition cursor-pointer">
-                Get Started
-              </button>
+              <Link href="/contact">
+                <button className="border border-[#575756] text-[#575756] py-2 px-6 w-max hover:bg-[#575756] hover:text-white transition cursor-pointer">
+                  Get Started
+                </button>
+              </Link>
             </div>
 
             {/* Card 2 */}
@@ -349,9 +353,11 @@ function Services() {
                   Two revisions (two rounds of adjustments based on feedback)
                 </li>
               </ul>
-              <button className="border border-[#575756] text-[#575756] py-2 px-6 w-max hover:bg-[#575756] hover:text-white transition cursor-pointer">
-                Get Started
-              </button>
+              <Link href="/contact">
+                <button className="border border-[#575756] text-[#575756] py-2 px-6 w-max hover:bg-[#575756] hover:text-white transition cursor-pointer">
+                  Get Started
+                </button>
+              </Link>
             </div>
 
             {/* Card 3 */}
@@ -405,9 +411,11 @@ function Services() {
                   Exclusive <strong>custom gift</strong> from the designer
                 </li>
               </ul>
-              <button className="border border-[#575756] text-[#575756] py-2 px-6 w-max hover:bg-[#575756] hover:text-white transition cursor-pointer">
-                Get Started
-              </button>
+              <Link href="/contact">
+                <button className="border border-[#575756] text-[#575756] py-2 px-6 w-max hover:bg-[#575756] hover:text-white transition cursor-pointer">
+                  Get Started
+                </button>
+              </Link>
             </div>
           </div>
 
