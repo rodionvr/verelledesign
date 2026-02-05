@@ -26,21 +26,7 @@ function Navbar() {
               <Link href="/" className="relative inline-block">
                 HOME
                 <span
-                  className="
-          absolute
-          left-0
-          -bottom-2
-          h-[1px]
-          w-full
-          bg-[#A99082]
-          scale-x-0
-          origin-right
-          transition-transform
-          duration-700
-          ease-out
-          group-hover:scale-x-100
-          group-hover:origin-left
-        "
+                  className="absolute left-0 -bottom-2 h-[1px] w-full bg-[#A99082] scale-x-0 origin-right transition-transform duration-700 ease-out group-hover:scale-x-100 group-hover:origin-left"
                 />
               </Link>
             </li>

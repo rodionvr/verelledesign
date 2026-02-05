@@ -6,7 +6,7 @@ import { Epilogue } from "next/font/google";
 import { useState } from "react";
 
 const epilogue = Epilogue({
-  weight: "400",
+  weight: ["200","300","400"],
   subsets: ["latin"],
 });
 
@@ -67,7 +67,7 @@ export default function Navbar() {
               <Link
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="relative inline-block"
+                className="relative inline-block font-light"
               >
                 {link.label}
                 <span className="absolute left-0 -bottom-2 h-[1px] w-full bg-[#A99082] scale-x-0 origin-right transition-transform duration-700 ease-out group-hover:scale-x-100 group-hover:origin-left" />

@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CallToActionBanner from "@/components/CallToActionBanner";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import MobileNav from "../../../components/MobileNav";
 import { Playfair_Display, Epilogue } from "next/font/google";
 
 const playfairdisplay = Playfair_Display({
@@ -45,9 +46,18 @@ export default function Project({ params }) {
     });
   }, [project.image_url]);
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768); // md breakpoint
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   return (
     <>
-      <Navbar />
+      {isMobile ? <MobileNav /> : <Navbar />}
       <div className="p-[30px]">
         <div className="project-description">
           <h1

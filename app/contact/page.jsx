@@ -70,7 +70,7 @@ function Contact() {
 
           {/* CONTACT FORM — OVERLAP */}
           <div className="relative z-20 -mt-32 px-6 md:px-0">
-            <div className="max-w-4xl mx-auto bg-[#F6F4F1] shadow-lg p-10 md:p-16 flex justify-center">
+            <div className="max-w-4xl mx-auto bg-[#F6F4F1] shadow-lg p-5 sm:p-10 md:p-16 flex justify-center">
               <ContactForm />
             </div>
           </div>
