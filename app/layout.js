@@ -3,7 +3,7 @@ import Script from "next/script";
 
 export const metadata = {
   title: "Verelle Design",
-  description: "Designer based in Ottawa-Gatineau area. Here to help you.",
+  description: "Interior Solutions Specialist based in Ottawa-Gatineau area. Here to help you.",
 };
 
 export default function RootLayout({ children }) {

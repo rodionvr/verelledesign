@@ -27,12 +27,12 @@ function Footer() {
             <div className="flex items-baseline gap-2 justify-center md:justify-start">
               <i className="fa-solid fa-phone leading-none" />
               <a
-                href="https://wa.me/16138646479"
+                href="https://wa.me/14382207370"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                +1 (613) 864-64-79
+                +1 (438) 220-73-70
               </a>
             </div>
 
